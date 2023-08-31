@@ -1,0 +1,52 @@
+5:27 
+
+interview ready: RT-2
+    1. Pushpa latha
+    2. Tulasi ram
+
+
+Karun: Sardar vallabhai patel : 6/14
+
+       Sardar + RT-2
+
+Pavan: Mather teresa 
+
+Manjunatha:  12 to 1  : 39
+
+Mahesh : 
+
+--> sowjanya: collections
+
+9 days on oops
+
+http://localhost:8080/viewAllStudents
+
+import React from 'react'
+import axios from 'axios'
+class GetRequest extends Component{
+    constructor(){
+        super()
+        this.state={
+            std:[]
+        }
+    }
+
+    componentDidMount(){
+          axios.get("http://localhost:8080/viewAllStudents")
+          .then(response=> {
+            console.log(response)
+          })
+          .catch(error=>{
+            console.log(error)
+          })
+    }
+    render() {
+        return (
+
+            <div>List of Students</div>
+        );
+        
+    }
+}
+
+export default GetRequest;
